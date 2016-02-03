@@ -153,7 +153,7 @@ function atualizaCreditos(e){
  }
  
  function atualizaHtmlCreditos(){
-	jQuery("#creditos").html("OBRIGATÓRIAS: "+ obgt +"/184("+ Math.round((obgt/184)*10000)/100 +"%)<br/>OPTATIVAS HUMANAS E COMPLEMENTARES: "+ humcomp +"/20("+ Math.round((humcomp/20)*10000)/100 +"%)<br/>OPTATIVAS PROFISSIONALIZANTES: "+ profis + "/12("+ Math.round((profis/12)*10000)/100 +"%)<br/>TOTAL: "+ (total) +"/216("+ Math.round(((total)/216)*10000)/100 +"%)");
+	jQuery("#creditos").html("OBRIGATORIAS: "+ obgt +"/184("+ Math.round((obgt/184)*10000)/100 +"%)<br/>OPTATIVAS HUMANAS E COMPLEMENTARES: "+ humcomp +"/20("+ Math.round((humcomp/20)*10000)/100 +"%)<br/>OPTATIVAS PROFISSIONALIZANTES: "+ profis + "/12("+ Math.round((profis/12)*10000)/100 +"%)<br/>TOTAL: "+ (total) +"/216("+ Math.round(((total)/216)*10000)/100 +"%)");
  }
  
  function togglePerfil(e){
