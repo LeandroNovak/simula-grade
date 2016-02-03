@@ -1,0 +1,55 @@
+#titulo
+{
+	width: 70%;
+	font-size: 30px;
+	font-weight:bold;
+	
+}
+#viewAllOptions
+{	
+	float:left;
+	left: 75%;
+	position:fixed;
+}
+#grade
+{
+	width: 70%;
+}
+.label:hover
+{
+	cursor:pointer;
+}
+.label
+{
+	font-weight:bold;
+}
+#creditos
+{
+	margin-top:2px;
+	border-top-style:dotted;
+	border-right-style:none;
+	border-bottom-style:dotted;
+	border-left-style:none;
+}
+.blocked
+{
+	background-color: #CCCCCC;
+}
+
+.ok
+{
+	background-color: #CCFFCC;
+}
+
+.obrigatorias
+{
+	margin-left: 15px;
+}
+#boxOptHumComp
+{
+	margin-left: 25px;
+}
+#boxOptProfis
+{
+	margin-left: 25px;
+}
