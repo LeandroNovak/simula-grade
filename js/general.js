@@ -77,7 +77,7 @@ function atualizaCreditos(e){
 		jQuery("#026182").parent().addClass("blocked");
 		jQuery("#026182").attr("disabled",true);
 	}
-	if(total >= 160){
+	if(total >= 164){
 		jQuery("#026190").parent().removeClass("blocked");
 		jQuery("#026190").attr("disabled",false);
 		jQuery("#026239").parent().removeClass("blocked");
