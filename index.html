@@ -20,8 +20,8 @@
 		OPÇÕES DE VISUALIZAÇÃO
 		<div id="viewOptions">
 		<input type="checkbox" id="obrigatorias" onclick="togglePerfil(jQuery('.obrigatorias'))"/>OBRIGATORIAS</br>
-		<input type="checkbox" id="optativas humanas e complementares" onclick = "togglePerfil(jQuery('.boxOptHumComp'))"/>OPTATIVAS HUMANAS E COMPLEMENTARES</br>
-		<input type="checkbox" id="optativas profissionalizantes" onclick="togglePerfil(jQuery('.boxOptProfis'))"/>OPTATIVAS PROFISSIONALIZANTES
+		<input type="checkbox" id="optativas humanas e complementares" onclick = "togglePerfil(jQuery('#boxOptHumComp'))"/>OPTATIVAS HUMANAS E COMPLEMENTARES</br>
+		<input type="checkbox" id="optativas profissionalizantes" onclick="togglePerfil(jQuery('#boxOptProfis'))"/>OPTATIVAS PROFISSIONALIZANTES
 	</div>
 	</div>
 	
@@ -312,7 +312,11 @@
 				<div class="optHumComp">
 					<input type="checkbox" id="370223" class="optHumComp 4"/>
 					370223 - TECNOLOGIA E SOCIEDADE (4)
-				</div>				
+				</div>	
+				<div class="optHumComp">
+					<input type"checkbox" id="112194" class"optHumComp"/>
+					112194 - TEORIA DAS ORGANIZACOES
+				</div>
 			</div>
 		<div class="label" onclick="togglePerfil(jQuery('#boxOptProfis'));">OPTATIVAS PROFISSIONALIZANTES</div>
 			<div id="boxOptProfis" class="optProfis">				
