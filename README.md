@@ -1,3 +1,2 @@
 # Simula-Grade
-Simulador de grade da Mari Yamamoto com algumas pequenas alterações.
-https://www.facebook.com/mariana.yamamoto
+Simulador de grade da Mari Yamamoto com algumas pequenas alterações, apenas para uso pessoal.
