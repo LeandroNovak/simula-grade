@@ -1,0 +1,396 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/general.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div id="viewAllOptions">
+		<span class="label" onclick="mostraTodos();">
+			<img src="images/expand.gif" alt="Expandir Tudo" />
+			EXPANDIR TUDO
+		</span>
+		<br>
+		<span class="label" onclick="escondeTodos();">
+			<img src="images/collapse.gif" alt="Recolher Tudo" />
+			RECOLHER TUDO
+		</span>
+		<div id="creditos"></div>
+		OPÇÕES DE VISUALIZAÇÃO
+		<div id="viewOptions">
+		<input type="checkbox" id="obrigatorias" onclick="togglePerfil(jQuery('.obrigatorias'))"/>OBRIGATÓRIAS
+	</div>
+	</div>
+	
+	<div id="titulo">
+		<span>Grade Curricular Ciência da Computação</span>
+	</div>
+	
+	<br>
+
+	<div id="grade">
+		<div>
+			<input type="checkbox" id="perfil1_all" onclick="check_all(this,'#perfil1')" class="obrigatorias"/>
+			<span class="label" onclick="togglePerfil(jQuery('#perfil1'));">PERFIL 1 (26 OBRIG)</span>
+			<div id="perfil1">
+				<div id="opc" class="obrigatorias">
+					<input type="checkbox" id="020001" class="obrigatorias 2"/>
+					020001 - ORIENTACAO PROFISSIONAL EM COMPUTACAO (2)
+				</div>
+				<div id="logica" class="obrigatorias">
+					<input type="checkbox" id="020338" class="obrigatorias 4"/>
+					020338 - INTRODUÇÃO À LÓGICA (4)
+				</div>
+				<div id="cap" class="obrigatorias">
+					<input type="checkbox" id="025070" class="obrigatorias 8"/>
+					025070 - CONSTRUÇÃO DE ALGORITMOS E PROGRAMAÇÃO (8)
+					</div>
+				<div id="ga" class="obrigatorias">
+					<input type="checkbox" id="081116" class="obrigatorias 4"/>
+					081116 - GEOMETRIA ANALITICA (4)
+				</div>
+				<div id="calc1" class="obrigatorias">
+					<input type="checkbox" id="089109" class="obrigatorias 4"/>
+					089109 - CÁLCULO 1 (4)
+				</div>
+				<div id="fis" class="obrigatorias">
+					<input type="checkbox" id="096130" class="obrigatorias 4"/>
+					096130 - FUNDAMENTOS DE FISICA PARA A COMPUTACAO (4)
+				</div>
+			</div>
+		</div>
+		<div>
+			<input type="checkbox" id="perfil2_all" onclick="check_all(this,'#perfil2')" class="obrigatorias"/>
+			<span class="label" onclick="togglePerfil(jQuery('#perfil2'));">PERFIL 2 (24 OBRIG + 4 HUM/COMP)</span>
+			<div id="perfil2">	
+				<div id="edisc" class="obrigatorias">
+					<input type="checkbox" id="020281" class="obrigatorias 2"/>
+					020281 - ESTRUTURAS DISCRETAS (2)
+				</div>
+				<div id="cd" class="obrigatorias">
+					<input type="checkbox" id="024376" class="obrigatorias 4" pre="020338"/>
+					024376 - CIRCUITOS DIGITAIS (4)
+				</div>
+				<div id="labcd" class="obrigatorias">
+					<input type="checkbox" id="024384" class="obrigatorias 2" pre="020338"/>
+					024384 - LABORATÓRIO DE CIRCUITOS DIGITAIS (2)
+				</div>
+				<div id="pc" class="obrigatorias">
+					<input type="checkbox" id="025020" class="obrigatorias 4" pre="025070"/>
+					025020 - PROGRAMAÇÃO DE COMPUTADORES (4)
+				</div>
+				<div id="alglin" class="obrigatorias">
+					<input type="checkbox" id="080136" class="obrigatorias 4" pre="081116"/>
+					080136 - ALGEBRA LINEAR 1 (4)
+				</div>
+				<div id="difseries" class="obrigatorias">
+					<input type="checkbox" id="082260" class="obrigatorias 4" pre="089109"/>
+					082260 - CALCULO DIFERENCIAL E SERIES (4)
+				</div>
+				<div id="prob" class="obrigatorias">
+					<input type="checkbox" id="152056" class="obrigatorias 4" pre="089109"/>
+					152056 - INTRODUCAO A PROBABILIDADE 1 (4)
+				</div>			
+			</div>
+		</div>
+		<div>
+			<input type="checkbox" id="perfil3_all" onclick="check_all(this,'#perfil3')" class="obrigatorias"/>
+			<span class="label" onclick="togglePerfil(jQuery('#perfil3'));">PERFIL 3 (18 OBRIG + 8 HUM/COMP)</span>
+			<div id="perfil3">
+				<div id="ed" class="obrigatorias">
+					<input type="checkbox" id="025208" class="obrigatorias 4" pre="025020"/>
+					025208 - ESTRUTURAS DE DADOS (4)
+				</div>
+				<div id="isi" class="obrigatorias">
+					<input type="checkbox" id="025607" class="obrigatorias 4"/>
+					025607 - INTRODUCAO AOS SISTEMAS DE INFORMACAO (4)
+				</div>
+				<div id="arq1" class="obrigatorias">
+					<input type="checkbox" id="027359" class="obrigatorias 4" pre="024376"/>
+					027359 - ARQUITETURA E ORGANIZACAO DE COMPUTADORES 1 (4)
+				</div>
+				<div id="labarq1" class="obrigatorias">
+					<input type="checkbox" id="027367" class="obrigatorias 2" pre="024376"/>
+					027367 - LABORATORIO DE ARQUITETURA E ORGANIZACAO DE COMPUTADORES 1 (2)
+				</div>
+				<div id="calcnum" class="obrigatorias">
+					<input type="checkbox" id="083020" class="obrigatorias 4" pre="089109 081116 025070"/>
+					083020 - CALCULO NUMERICO (4)
+				</div>
+			</div>
+		</div>
+		<div>
+			<input type="checkbox" id="perfil4_all" onclick="check_all(this,'#perfil4')" class="obrigatorias"/>
+			<span class="label" onclick="togglePerfil(jQuery('#perfil4'));">PERFIL 4 (30 OBRIG)</span>
+			<div id="perfil4">
+				<div id="lfa" class="obrigatorias">
+					<input type="checkbox" id="020265" class="obrigatorias 4" pre="025070"/>
+					020265 - LINGUAGENS FORMAIS E AUTOMATOS (4)
+				</div>
+				<div id="grafos" class="obrigatorias">
+					<input type="checkbox" id="020346" class="obrigatorias 4" pre="025020 020281"/>
+					020346 - TEORIA DOS GRAFOS (4)
+				</div>
+				<div id="ori" class="obrigatorias">
+					<input type="checkbox" id="022667" class="obrigatorias 4" pre="025208"/>
+					022667 - ORGANIZACAO E RECUPERACAO DA INFORMACAO (4)
+				</div>
+				<div id="paa" class="obrigatorias">
+					<input type="checkbox" id="025089" class="obrigatorias 4" pre="025208"/>
+					025089 - PROJETO E ANÁLISE DE ALGORITMOS (4)
+				</div>
+				<div id="bd" class="obrigatorias">
+					<input type="checkbox" id="025216" class="obrigatorias 4" pre="025208_025020"/>
+					025216 - BANCO DE DADOS (4)
+				</div>
+				<div id="es1" class="obrigatorias">
+					<input type="checkbox" id="025666" class="obrigatorias 4" pre="025020 025607"/>
+					025666 - ENGENHARIA DE SOFTWARE 1 (4)
+				</div>
+				<div id="arq2" class="obrigatorias">
+					<input type="checkbox" id="027375" class="obrigatorias 4"/>
+					027375 - ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES 2 (4)
+				</div>
+				<div id="labarq2" class="obrigatorias">
+					<input type="checkbox" id="027383" class="obrigatorias 2"/>
+					027383 - LABORATÓRIO DE ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES 2 (2)
+				</div>
+			</div>
+		</div>
+		<div>
+			<input type="checkbox" id="perfil5_all" onclick="check_all(this,'#perfil5')" class="obrigatorias"/>
+			<span class="label" onclick="togglePerfil(jQuery('#perfil5'));">PERFIL 5 (24 OBRIG + 4 HUM/COMP)</span>
+			<div id="perfil5">
+				<div id="comp1" class="obrigatorias">
+					<input type="checkbox" id="021130" class="obrigatorias 4" pre="025208 020265"/>
+					021130 - CONSTRUÇÃO DE COMPILADORES 1 (4)
+				</div>
+				<div id="so1" class="obrigatorias">
+					<input type="checkbox" id="021270" class="obrigatorias 4" pre="027359 027367"/>
+					021270 - SISTEMAS OPERACIONAIS 1 (4)
+				</div>
+				<div id="plp" class="obrigatorias">
+					<input type="checkbox" id="025097" class="obrigatorias 4"/>
+					025097 - PARADIGMAS DE LINGUAGENS DE PROGRAMACAO (4)
+				</div>
+				<div id="labbd" class="obrigatorias">
+					<input type="checkbox" id="025224" class="obrigatorias 2" pre="025216"/>
+					025224 - LABORATORIO DE BANCO DE DADOS (2)
+				</div>
+				<div id="es2" class="obrigatorias">
+					<input type="checkbox" id="025674" class="obrigatorias 4" pre="025666"/>
+					025674 - ENGENHARIA DE SOFTWARE 2 (4)
+				</div>
+				<div id="pac" class="obrigatorias">
+					<input type="checkbox" id="026093" class="obrigatorias 2" pre="025020"/>
+					026093 - PROJETO ACADÊMICO EM COMPUTAÇÃO (2)
+				</div>
+				<div id="adm" class="obrigatorias">
+					<input type="checkbox" id="301540" class="obrigatorias 4"/>
+					301540 - ADMINISTRAÇÃO DE EMPRESAS 1 (4)
+				</div>
+			</div>
+		</div>
+		<div>
+			<input type="checkbox" id="perfil6_all" onclick="check_all(this,'#perfil6')" class="obrigatorias"/>
+			<span class="label" onclick="togglePerfil(jQuery('#perfil6'));">PERFIL 6 (24 OBRIG + 4 PROFIS)</span>
+			<div id="perfil6">
+				<div id="comp2" class="obrigatorias">
+					<input type="checkbox" id="021148" class="obrigatorias 4" pre="021130"/>
+					021148 - CONSTRUÇÃO DE COMPILADORES 2 (4)
+				</div>
+				<div id="redes" class="obrigatorias">
+					<input type="checkbox" id="021237" class="obrigatorias 4" pre="021270"/>
+					021237 - REDES DE COMPUTADORES (4)
+				</div>
+				<div id="so2" class="obrigatorias">
+					<input type="checkbox" id="021288" class="obrigatorias 4" pre="021270"/>
+					021288 - SISTEMAS OPERACIONAIS 2 (4)
+				</div>
+				<div id="ia" class="obrigatorias">
+					<input type="checkbox" id="022705" class="obrigatorias 4" pre="025208_020338_025089"/>
+					022705 - INTELIGÊNCIA ARTIFICIAL (4)
+				</div>
+				<div id="cg" class="obrigatorias">
+					<input type="checkbox" id="025526" class="obrigatorias 4" pre="080136 025020"/>
+					025526 - COMPUTAÇÃO GRÁFICA E MULTIMÍDIA (4)
+				</div>
+				<div id="metodologias" class="obrigatorias">
+					<input type="checkbox" id="025593" class="obrigatorias 4" pre="025674"/>
+					025593 - METODOLOGIAS DE DESENVOLVIMENTO DE SISTEMAS 1 (4)
+				</div>			
+			</div>
+		</div>
+		<div>
+			<input type="checkbox" id="perfil7_all" onclick="check_all(this,'#perfil7')" class="obrigatorias"/>
+			<span class="label" onclick="togglePerfil(jQuery('#perfil7'));">PERFIL 7 (12 OBRIG + 4 HUM/COMP + 8 PROFIS)</span>
+			<div id="perfil7">
+				<div id="dsw" class="obrigatorias">
+					<input type="checkbox" id="020680" class="obrigatorias 4" pre="025070"/>
+					DESENVOLVIMENTO DE SOFTWARE PARA A WEB (4)
+				</div>
+				<div id="sd" class="obrigatorias">
+					<input type="checkbox" id="025321" class="obrigatorias 4" pre="021270"/>
+					020680 - SISTEMAS DISTRIBUIDOS (4)
+				</div>
+				<div id="ac" class="obrigatorias">
+					<input type="checkbox" id="atcomp" class="obrigatorias 4"/>
+					ATIVIDADES COMPLEMENTARES (4)
+				</div>			
+			</div>
+		<div>
+			<input type="checkbox" id="perfil8_all" onclick="check_all(this,'#perfil8')" class="obrigatorias"/>
+			<span class="label" onclick="togglePerfil(jQuery('#perfil8'));">PERFIL 8 (26 OBRIG)</span>
+			<div id="perfil8">
+				<div id="tg" class="obrigatorias">
+					<input type="checkbox" id="026182" class="obrigatorias 26"/>
+					026182 - TRABALHO DE GRADUACAO (26)
+				</div>
+				<div id="estag" class="obrigatorias">
+					<input type="checkbox" id="026190" class="obrigatorias 24"/>
+					026190 - ESTÁGIO EM COMPUTAÇÃO (24)
+				</div>
+				<div id="semin" class="obrigatorias">
+					<input type="checkbox" id="026239" class="obrigatorias 2"/>
+					026239 - SEMINÁRIOS EM COMPUTAÇÃO (2)
+				</div>
+			</div>
+		</div>
+		<div class="label" onclick="togglePerfil(jQuery('#boxOptHumComp'));">OPTATIVAS HUMANAS E COMPLEMENTARES</div>
+			<div id="boxOptHumComp" class="optHumComp">			
+				<div class="optHumComp">
+					<input type="checkbox" id="162078" class="optHumComp 4"/>
+					162078 - HISTORIA DAS REVOLUCOES MODERNAS (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="180017" class="optHumComp 4"/>
+					180017 - METODOS E TECNICAS DE PESQUISA (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="180025" class="optHumComp 4"/>
+					180025 - FILOSOFIA DA CIÊNCIA (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="180041" class="optHumComp 4"/>
+					180041 - INTRODUCAO A FILOSOFIA (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="370053" class="optHumComp 4"/>
+					370053 - INTRODUÇÃO À SOCIOLOGIA GERAL (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="370088" class="optHumComp 4"/>
+					370088 - SOCIOLOGIA INDUSTRIAL E DO TRABALHO (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="061085" class="optHumComp 4"/>
+					061085 - INGLES INSTRUMENTAL PARA COMPUTACAO 1 (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="061093" class="optHumComp 4" pre="061085"/>
+					061093 - INGLES INSTRUMENTAL PARA COMPUTACAO 2 (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="062014" class="optHumComp 4"/>
+					062014 - COMUNICACAO E EXPRESSAO (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="164003" class="optHumComp 4"/>
+					164003 - ECONOMIA GERAL (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="164054" class="optHumComp 4"/>
+					164054 - ECONOMIA DA EMPRESA (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="180050" class="optHumComp 4"/>
+					180050 - NOCOES GERAIS DE DIREITO (4)
+				</div>
+				<div class="optHumComp">
+					<input type="checkbox" id="370223" class="optHumComp 4"/>
+					370223 - TECNOLOGIA E SOCIEDADE (4)
+				</div>				
+			</div>
+		<div class="label" onclick="togglePerfil(jQuery('#boxOptProfis'));">OPTATIVAS PROFISSIONALIZANTES</div>
+			<div id="boxOptProfis" class="optProfis">				
+				<div class="optProfis">
+					<input type="checkbox" id="025232" class="optProfis 4" pre="025216"/>
+					025232 - PROJETO DE BANCO DE DADOS (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027022" class="optProfis 4"/>
+					027022 - TOPICOS EM INFORMATICA (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027030" class="optProfis 4"/>
+					027030 - TOPICOS EM INFORMATICA 2 (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027073" class="optProfis 4"/>
+					027073 - SISTEMAS DE TEMPO REAL (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027081" class="optProfis 4"/>
+					027081 - PLANEJAMENTO E GERENCIAMENTO DE SISTEMAS DE INFORMACAO (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027090" class="optProfis 4"/>
+					027090 - EMPREENDEDORES EM INFORMATICA (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027170" class="optProfis 4"/>
+					027170 - TOPICOS DE INFORMATICA 3 (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027189" class="optProfis 4"/>
+					027189 - TOPICOS EM INFORMATICA 4 (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027260" class="optProfis 4"/>
+					027260 - PROJETO E MANUFATURA ASSISTIDOS POR COMPUTADOR (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027278" class="optProfis 4" pre="027375"/>
+					027278 - MICROCONTROLADORES E APLICAÇÕES (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027286" class="optProfis 2" pre="027375"/>
+					027286 - LABORATÓRIO DE MICROCONTROLADORES E APLICAÇÕES (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027430" class="optProfis 4" pre="021270"/>
+					027430 - TECNOLOGIA E COMUNICAÇÃO DE DADOS (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027448" class="optProfis 4" pre="027359"/>
+					027448 - ARQUITETURA DE SISTEMAS COMPUTACIONAIS DE ALTO DESEMPENHO (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027456" class="optProfis 4" pre="152056"/>
+					027456 - ANÁLISE DE DESEMPENHO DE SISTEMAS COMPUTACIONAIS (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027464" class="optProfis 4" pre="025208 025089 025216"/>
+					027464 - INTRODUÇÃO À BIOINFORMÁTICA (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="027499" class="optProfis 4"/>
+					027499 - EMPREENDEDORISMO E DESENVOLVIMENTO DE NEGÓCIOS (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="029009" class="optProfis 4" pre="025607"/>
+					029009 - METODOLOGIA CIENTÍFICA E GERENCIAMENTO DE PROJETOS (4)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="281190" class="optProfis 2"/>
+					281190 - TEORIAS DOS JOGOS (2)
+				</div>
+				<div class="optProfis">
+					<input type="checkbox" id="023582" class="optProfis 4" pre="083020 025089_025070"/>
+					023582 - MATEMÁTICA COMPUTACIONAL (4)
+				</div>
+			</div>
+	</div>	
+</body>
+</html>
